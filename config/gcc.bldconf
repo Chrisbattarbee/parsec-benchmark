@@ -13,7 +13,7 @@ export GNUTOOL_HOME="/usr"
 export BINARY_PREFIX=""
 
 if [ -z "$HOSTCC" ]; then
-  export HOSTCC=gcc
+  export HOSTCC=clang
 fi
 if [ -z "$M4" ]; then
   export M4=m4
@@ -26,8 +26,8 @@ if [ -z "$TARGET_CROSS" ]; then
 fi
 
 # Compilers and preprocessors
-export CC="${TARGET_CROSS}gcc"
-export CXX="${TARGET_CROSS}g++"
+export CC="/data/llvm-project/llvm/build-release/bin/clang"
+export CXX="/data/llvm-project/llvm/build-release/bin/clang++"
 export CPP="${TARGET_CROSS}cpp"
 export CXXCPP=""
 

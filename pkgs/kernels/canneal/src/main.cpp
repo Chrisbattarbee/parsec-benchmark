@@ -54,17 +54,6 @@ void* entry_pt(void*);
 
 
 int main (int argc, char * const argv[]) {
-#ifdef PARSEC_VERSION
-#define __PARSEC_STRING(x) #x
-#define __PARSEC_XSTRING(x) __PARSEC_STRING(x)
-        cout << "PARSEC Benchmark Suite Version "__PARSEC_XSTRING(PARSEC_VERSION) << endl << flush;
-#else
-        cout << "PARSEC Benchmark Suite" << endl << flush;
-#endif //PARSEC_VERSION
-#ifdef ENABLE_PARSEC_HOOKS
-	__parsec_bench_begin(__parsec_canneal);
-#endif
-
 	srandom(3);
 
 	if(argc != 5 && argc != 6) {

@@ -1198,13 +1198,6 @@ void AdvanceFrameVisualization()
 
 int main(int argc, char *argv[])
 {
-#ifdef PARSEC_VERSION
-#define __PARSEC_STRING(x) #x
-#define __PARSEC_XSTRING(x) __PARSEC_STRING(x)
-        std::cout << "PARSEC Benchmark Suite Version "__PARSEC_XSTRING(PARSEC_VERSION) << std::endl << std::flush;
-#else
-        std::cout << "PARSEC Benchmark Suite" << std::endl << std::flush;
-#endif //PARSEC_VERSION
 #ifdef ENABLE_PARSEC_HOOKS
   __parsec_bench_begin(__parsec_fluidanimate);
 #endif

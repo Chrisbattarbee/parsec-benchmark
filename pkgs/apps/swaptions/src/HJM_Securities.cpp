@@ -137,15 +137,6 @@ int main(int argc, char *argv[])
 	
 	FTYPE **factors=NULL;
 
-#ifdef PARSEC_VERSION
-#define __PARSEC_STRING(x) #x
-#define __PARSEC_XSTRING(x) __PARSEC_STRING(x)
-        printf("PARSEC Benchmark Suite Version "__PARSEC_XSTRING(PARSEC_VERSION)"\n"); 
-	fflush(NULL);
-#else
-        printf("PARSEC Benchmark Suite\n");
-	fflush(NULL);
-#endif //PARSEC_VERSION
 #ifdef ENABLE_PARSEC_HOOKS
 	__parsec_bench_begin(__parsec_swaptions);
 #endif
