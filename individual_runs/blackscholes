@@ -1,0 +1,1 @@
+../bin/parsecmgmt -a run -p blackscholes -i simmedium
